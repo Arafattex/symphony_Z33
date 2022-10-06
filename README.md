@@ -1,4 +1,4 @@
-# Android device tree for Symphony Z33 (Z33)
+# Android device tree for Micromax IN_2b (E7544)
 
 ```
 #

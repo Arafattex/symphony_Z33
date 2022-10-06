@@ -8,8 +8,8 @@
 
 set -e
 
-DEVICE=Z33
-VENDOR=symphony
+DEVICE=E7544
+VENDOR=micromax
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

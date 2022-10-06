@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_Z33.mk
+    $(LOCAL_DIR)/twrp_E7544.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_Z33-user \
-    twrp_Z33-userdebug \
-    twrp_Z33-eng
+    twrp_E7544-user \
+    twrp_E7544-userdebug \
+    twrp_E7544-eng

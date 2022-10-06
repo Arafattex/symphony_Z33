@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/symphony/Z33
+LOCAL_PATH := device/micromax/E7544
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -23,6 +23,7 @@ PRODUCT_PACKAGES += \
     libgptutils \
     libz \
     libcutils
+
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
