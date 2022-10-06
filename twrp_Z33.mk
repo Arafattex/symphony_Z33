@@ -10,13 +10,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from Z33 device
 $(call inherit-product, device/symphony/Z33/device.mk)
 
 PRODUCT_DEVICE := Z33
-PRODUCT_NAME := omni_Z33
+PRODUCT_NAME := twrp_Z33
 PRODUCT_BRAND := Symphony
 PRODUCT_MODEL := Z33
 PRODUCT_MANUFACTURER := symphony

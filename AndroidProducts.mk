@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_Z33.mk
+    $(LOCAL_DIR)/twrp_Z33.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_Z33-user \
-    omni_Z33-userdebug \
-    omni_Z33-eng
+    twrp_Z33-user \
+    twrp_Z33-userdebug \
+    twrp_Z33-eng
