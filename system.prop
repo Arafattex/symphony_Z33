@@ -1,0 +1,7 @@
+ro.hardware=ums512_1h10
+ro.secure=0
+ro.adb.secure=0
+ro.debuggable=1
+ro.sys.usb.storage.type=mtp
+persist.sys.isUsbOtgEnabled=true
+ro.treble.enabled=true
