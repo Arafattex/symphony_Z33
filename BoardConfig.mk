@@ -43,7 +43,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := ums512_1h10
+TARGET_BOOTLOADER_BOARD_NAME := p352
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -83,9 +83,9 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
-BOARD_SUPER_PARTITION_GROUPS := symphony_dynamic_partitions
-BOARD_SYMPHONY_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
-BOARD_SYMPHONY_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
+BOARD_SUPER_PARTITION_GROUPS := motorola_dynamic_partitions
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
 # Platform
 TARGET_BOARD_PLATFORM := ums512
@@ -94,6 +94,9 @@ TARGET_BOARD_PLATFORM := ums512
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-08-01
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -111,3 +114,13 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
+
+# Debugging
+TWRP_EVENT_LOGGING := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
+# Kernel module loading
+TW_LOAD_VENDOR_MODULES := "incrementalfs.ko kheaders.ko trace_irqsoff_bytedancy.ko trace_noschedule_bytedancy.ko trace_runqlat_bytedancy.ko"
+# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true

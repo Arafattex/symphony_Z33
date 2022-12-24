@@ -6,6 +6,9 @@
 #
 
 LOCAL_PATH := device/symphony/Z33
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -16,13 +19,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-impl.recovery \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
     bootctrl.ums512 \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.ums512.recovery
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -30,3 +32,8 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+	android.hardware.fastboot@1.0-impl-mock \
+	fastbootd
